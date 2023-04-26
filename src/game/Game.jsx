@@ -4,7 +4,7 @@ import Board from "./Board"
 function Game(){
   const [squares, setSquares] = useState(Array(9).fill(null))
   const [xIsNext, setXisNext] = useState(true)
-  const [history, setHistory] = useState([])
+  const [history, setHistory] = useState([Array(9).fill(null)])
   const [tempRedo, setTempRedo] = useState(null)
 
   function onSquareClick(i){
