@@ -72,12 +72,9 @@ ul{
 @media screen and (max-width: 700px) {
   .container{
     display: flex;
-    height: 100vh;
+    height: 97vh;
   }
 
-  .row{
-    margin-bottom: 5.2rem;
-  }
 
   ul{
     grid-template-columns: auto auto;

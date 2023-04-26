@@ -83,7 +83,7 @@ function Game(){
       <div className="row">
       <h4>The Tic-Tac-Toe Game</h4>
       <Board squares={squares} onSquareClick={onSquareClick} />
-      <span>Code by James Ng'ang'a</span>
+      <span>Code by <a style={{textDecoration: 'none', color: 'goldenrod'}} href="http://github.com/devjamesnjoroge/" target="_blank" rel="noopener noreferrer">James Ng'ang'a</a></span>
       </div>
       <div className="row">
         <div className="title">
