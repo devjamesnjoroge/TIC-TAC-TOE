@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # Preview
 
-<img href="%PUBLIC_URL%/preview.png">
+<img href="https://github.com/devjamesnjoroge/TIC-TAC-TOE/blob/master/public/preview.png">
 
 ## Available Scripts
 
