@@ -75,6 +75,10 @@ ul{
     height: 100vh;
   }
 
+  .row{
+    margin-bottom: 5rem;
+  }
+
   ul{
     grid-template-columns: auto auto;
   }
