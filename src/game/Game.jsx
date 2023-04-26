@@ -86,10 +86,12 @@ function Game(){
       <span>Code by James Ng'ang'a</span>
       </div>
       <div className="row">
+        <div className="title">
         <h3>The Winner is : </h3>
-        <br />
-        <strong >{calculateWinner(squares)}</strong >
-        <br />
+
+        <strong style={{color: 'red'}}>{calculateWinner(squares)}</strong >
+
+        </div>
         <div>{onPlay()}</div>
       </div>
     </div>
