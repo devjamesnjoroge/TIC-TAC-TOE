@@ -10,9 +10,10 @@
 .container{
   width: 100%;
   display: flex;
-  height: 100vh;
+  max-height: auto;
   flex-direction: column-reverse;
   justify-content: space-evenly;
+  padding: 1.5rem 0;
 }
 
 .row{
@@ -21,7 +22,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: .5em 0;
+  padding: .5rem 0;
 }
 
 .board{
@@ -32,7 +33,7 @@
 }
 
 .board-row{
-  height: 100px;
+  height: 105px;
   width: 300px;
   display: flex;
   align-items: center;
@@ -42,7 +43,9 @@
 button{
   height: 100px;
   width: 100px;
-  border: 1px solid black;
+  border: 3px solid darkgreen;
+  font-size: 3rem;
+  margin: 2px;
 }
 
 ul{
@@ -65,20 +68,56 @@ ul{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: .5rem;
 }
 
-.title h3{
-  margin-right: 20px;
+.title strong{
+  margin-left: 1rem;
+  font-size: 2rem;
 }
 
-@media screen and (max-width: 700px) {
+em{
+  color: red;
+  font-size: 1.5rem;
+  margin: 1em  0;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 700px) and (min-width: 300px) {
   .container{
     display: flex;
-    height: 97vh;
+    height: max-content;
+  }
+
+
+  ul{
+    grid-template-columns: auto auto auto;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .container{
+    display: flex;
+    height: max-content;
   }
 
 
   ul{
     grid-template-columns: auto auto;
+  }
+
+  button{
+    height: 90px;
+    width: 90px;
+  }
+
+  .board-row{
+    height: 95px;
+    width: 270px;
+  }
+
+  .board{
+    height: 270px;
+    width: 270px;
   }
 }

@@ -1,5 +1,6 @@
 import {  useState } from "react"
 import Board from "./Board"
+import TimeTravel from "./TimeTravel"
 
 function Game(){
   const [squares, setSquares] = useState(Array(9).fill(null))
@@ -45,7 +46,7 @@ function Game(){
 
   }
 
-  function calculateWinner(squares){
+  function calculateWinner(){
     const lines = [
       [0,1,2],
       [3,4,5],
@@ -68,7 +69,7 @@ function Game(){
 
   function onPlay(){
     const histClone = history.slice(history)
-    const onRedo = histClone.map((hist)=><li key={hist} className="pills" onClick={()=>{handleTimeTravel(hist)}}>Player move #{history.indexOf(hist)}</li>)
+    const onRedo = histClone.map((hist)=><li key={hist} className="pills" onClick={()=>{handleTimeTravel(hist)}}>Move {history.indexOf(hist)}</li>)
     return <ul>{onRedo}</ul>
   }
 
@@ -80,19 +81,11 @@ function Game(){
 
   return(
     <div className="container">
+      <TimeTravel onPlay={onPlay} calculateWinner={calculateWinner} history={history}/>
       <div className="row">
-      <h4>The Tic-Tac-Toe Game</h4>
+      <h4 style={{textDecoration: 'underline'}}>The Tic-Tac-Toe Game</h4>
       <Board squares={squares} onSquareClick={onSquareClick} />
       <span>Code by <a style={{textDecoration: 'none', color: 'goldenrod'}} href="http://github.com/devjamesnjoroge/" target="_blank" rel="noopener noreferrer">James Ng'ang'a</a></span>
-      </div>
-      <div className="row">
-        <div className="title">
-        <h3>The Winner is : </h3>
-
-        <strong style={{color: 'red'}}>{calculateWinner(squares)}</strong >
-
-        </div>
-        <div>{onPlay()}</div>
       </div>
     </div>
   )
