@@ -1,4 +1,4 @@
-function TimeTravel({onPlay, calculateWinner, history}){
+function TimeTravel({onPlay, calculateWinner, history, tempRedo}){
     function checkWinner(){
         if (calculateWinner()){
             return (<div className="title">
@@ -8,7 +8,7 @@ function TimeTravel({onPlay, calculateWinner, history}){
     
             </div>)
         } else{
-            if (history.length === 10){
+            if (history.length === 10 && tempRedo === null){
                 return <em>Game Over, No winner!</em>
             } else{
                 return

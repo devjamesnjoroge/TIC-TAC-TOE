@@ -81,7 +81,7 @@ function Game(){
 
   return(
     <div className="container">
-      <TimeTravel onPlay={onPlay} calculateWinner={calculateWinner} history={history}/>
+      <TimeTravel onPlay={onPlay} calculateWinner={calculateWinner} history={history} tempRedo={tempRedo}/>
       <div className="row">
       <h4 style={{textDecoration: 'underline'}}>The Tic-Tac-Toe Game</h4>
       <Board squares={squares} onSquareClick={onSquareClick} />
